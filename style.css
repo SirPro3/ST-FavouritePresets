@@ -1,0 +1,8 @@
+optgroup {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#favorite_preset_button .fa-solid {
+    color: yellow;
+}

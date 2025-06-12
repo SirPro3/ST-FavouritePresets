@@ -1,0 +1,8 @@
+{
+    "name": "ST-FavouritePresets",
+    "display_name": "Favorite Presets ",
+    "version": "1.0.0",
+    "author": "SirPro3",
+    "js": "index.js",
+    "css": "style.css"
+}
