@@ -1,6 +1,6 @@
 {
-    "name": "ST-FavouritePresets",
-    "display_name": "Favorite Presets ",
+    "name": "ST-PresetManager",
+    "display_name": "Preset Manager ",
     "version": "1.0.0",
     "author": "SirPro3",
     "js": "index.js",
