@@ -190,6 +190,31 @@ import { t } from '../../../i18n.js';
           `;
   
           const titleElement = section.querySelector('h3');
+  
+          const upButton = document.createElement('span');
+          upButton.className = 'move-section-up';
+          upButton.innerHTML = '&#9650;';
+          upButton.title = 'Move up';
+          upButton.addEventListener('click', () => {
+              if (section.previousElementSibling) {
+                  section.parentElement.insertBefore(section, section.previousElementSibling);
+                  saveSections();
+                  updatePresetOrder(/** @type {HTMLSelectElement} */ (document.getElementById('settings_preset_openai')));
+              }
+          });
+  
+          const downButton = document.createElement('span');
+          downButton.className = 'move-section-down';
+          downButton.innerHTML = '&#9660;';
+          downButton.title = 'Move down';
+          downButton.addEventListener('click', () => {
+              if (section.nextElementSibling) {
+                  section.parentElement.insertBefore(section.nextElementSibling, section);
+                  saveSections();
+                  updatePresetOrder(/** @type {HTMLSelectElement} */ (document.getElementById('settings_preset_openai')));
+              }
+          });
+  
           const deleteButton = document.createElement('span');
           deleteButton.className = 'delete-section';
           deleteButton.innerHTML = '&times;';
@@ -199,7 +224,13 @@ import { t } from '../../../i18n.js';
               saveSections();
               updatePresetOrder(/** @type {HTMLSelectElement} */ (document.getElementById('settings_preset_openai')));
           });
-          titleElement.appendChild(deleteButton);
+  
+          const controls = document.createElement('div');
+          controls.className = 'section-controls';
+          controls.appendChild(upButton);
+          controls.appendChild(downButton);
+          controls.appendChild(deleteButton);
+          titleElement.appendChild(controls);
   
           const presetList = section.querySelector('.preset-list');
           const addPresetButton = section.querySelector('.add-preset-button');

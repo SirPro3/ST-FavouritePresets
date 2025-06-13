@@ -57,14 +57,27 @@
     color: var(--SmartThemeBodyColor);
 }
 
-.preset-section-title .delete-section {
+.preset-section-title .section-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.preset-section-title .delete-section,
+.preset-section-title .move-section-up,
+.preset-section-title .move-section-down {
     color: var(--SmartThemeBodyColor);
     opacity: 0.5;
+    cursor: pointer;
+}
+
+.preset-section-title .delete-section:hover,
+.preset-section-title .move-section-up:hover,
+.preset-section-title .move-section-down:hover {
+    opacity: 1;
 }
 
 .preset-section-title .delete-section:hover {
     color: var(--fullred);
-    opacity: 1;
 }
 .preset-list {
     min-height: 20px;
