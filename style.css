@@ -22,6 +22,8 @@
     max-width: 500px;
     color: var(--SmartThemeBodyColor);
     font-family: var(--mainFontFamily);
+    max-height: 80vh;
+    overflow-y: auto;
 }
 .close-preset-manager-popup {
     color: var(--SmartThemeBodyColor);
