@@ -167,3 +167,24 @@ optgroup {
     color: var(--SmartThemeBodyColor);
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .preset-manager-popup-content {
+        width: 95%;
+        padding: 15px;
+        max-height: 90vh;
+    }
+
+    .preset-section-title {
+        font-size: calc(var(--mainFontSize) * 1.1);
+    }
+
+    .preset-item {
+        padding: 8px;
+        font-size: calc(var(--mainFontSize) * 0.95);
+    }
+
+    .add-preset-button, #add_section_button {
+        padding: 8px 12px;
+    }
+}
